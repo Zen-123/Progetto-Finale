@@ -1,10 +1,15 @@
 #include <iostream>
 #include <ctime>
 #include "showScoreboard.h"
+#include "player.h"
+#include "printScoreboard.h"
+
 
 
 int main(){
 
-func();
+    Player P;
+
+    func(P);
 }
 
