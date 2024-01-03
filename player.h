@@ -64,5 +64,37 @@ public:
 };
 
 
+    class HumanPlayer : public Player{
+
+    public:
+
+    HumanPlayer(){}
+
+    ~HumanPlayer() {}
+};
+
+class ComputerPlayer : public Player{
+
+public:
+
+    ComputerPlayer(){}
+
+    ~ComputerPlayer() {}
+
+};
+    void startGameHuman(){
+        HumanPlayer P1;
+        ComputerPlayer P2;
+        ComputerPlayer P3;
+        ComputerPlayer P4;
+    
+     }
+
+     void startGameComputer(){
+         ComputerPlayer P1;
+         ComputerPlayer P2;
+         ComputerPlayer P3;
+         ComputerPlayer P4;
+    
 
 #endif
