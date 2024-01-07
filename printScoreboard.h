@@ -53,33 +53,123 @@ void func(Player& p){
         board[0][j] = initCols[j];
 
     for(int i = 1; i<COL; i++)
-        board[i][0] = initRows[i];
+        board[i][0] = initCols[i];
 
     for(int i =2; i<ROW-1; i++){
         for(int j =2; j<COL-1; j++){
             board[i][j] = ' ';
         }
     }
-
+    
     printScoreboard(board);
 
     std::cout<<"\n\n-------------------------\n\n";
-    int move = p.throwDice();
-    std::cout<<"Dado: "<<move<<"\n\n";
+    int move;
 
     //TEST SPOSTAMENTO GIOCATORE CON SUCCESSIVA VISUALIZZAZIONE
 
-    if(p.getPositionI() == 1){
-        int j = p.getPositionJ();
-        if((j+move+1    ) > COL-1 ){
-            int newPos = (j+move+1)-(COL-1);
-            board[newPos][COL-1] += "1";
-        }else{
-            board[1][j+move] += "1";
+    int diffCol, diffRow;
+    int n, i, j;       
+
+
+
+    while(n != 1){
+        move = p.throwDice();
+        std::cout<<"Dado: "<<move<<"\n\n";
+        //OK!
+        if(p.getPositionI() == 1  ){
+            j = p.getPositionJ();
+            if((j+move+1) > COL-1 ){
+                diffCol = (COL-1) - (j);
+                int tmp = (COL-2)  + diffCol;
+                j = move - tmp;
+                if(j>0){
+                    board[ROW-1][(COL-1)-j] += "1";
+                    p.setPosition(ROW-1, (COL-1)-j);
+                }else{
+                    i =1+ (move - diffCol);
+                    board[i][COL-1] += "1";
+                    p.setPosition(i, COL-1);
+                }
+            }else{
+                p.setPosition(1, j+move);
+                board[1][j+move] += "1";
+            }
+            //OK!
+        }else if(p.getPositionJ() == COL-1 ){
+            i = p.getPositionI();
+            if((i+move) > ROW-1){
+                diffRow = move - ((COL-1) - i);
+                 diffCol = (ROW-1) - diffRow;
+                if(diffCol > 0){
+                    board[ROW-1][diffCol] += "1";
+                    p.setPosition(ROW-1, diffCol);
+                }else{
+                    diffRow = move - (ROW-1) - (COL-1-i-1);
+                    i = (COL-1) - diffRow;
+                    board[i][1] += "1";
+                    p.setPosition(i, 1);
+                }
+                
+              
+            }else{
+                board[i+move][COL-1] += "1";
+                p.setPosition(i+move, COL-1);
+
+            }
+            
+        }else if(p.getPositionI() == ROW-1){
+            j = p.getPositionJ();
+            if((j-move) < 1){
+                diffCol =move - (j-1);
+                i = (ROW-1) - diffCol;
+                if(i > 0){
+                    board[i][1] += "1";
+                    p.setPosition(i,1);
+                }else{
+                    int tmp = (j-1) + (ROW-2);
+                    j = move-tmp;
+                    board[1][1+j] += "1";
+                    p.setPosition(1, j+1);
+                }
+            }else{
+                board[ROW-1][j-move] += "1";
+                p.setPosition(ROW-1, j-move);
+
+            }    
+                
+        }else if(p.getPositionJ() == 1){
+            i = p.getPositionI();
+            if((i-move) < 1){
+                diffRow = i-2;
+                int tmp = diffRow + (COL-1);
+                j = diffRow+1;
+                if(j > 0){
+                    board[1][j] += "1";
+                    p.setPosition(1, j);
+                }else{
+                    diffRow = move - (ROW-1) - (i-2);
+                    i = diffRow+1;
+                    board[i][COL-1] += "1";
+                    p.setPosition(i, COL-1);
+                }
+            }else{
+                board[i-move][1] += "1";
+                p.setPosition(i-move, 1);
+
+            }
         }
-    }
+        
+        printScoreboard(board);
+
+        std::cout<<"\nContinuare?  ";
+        std::cin>>n;
+
     
-    printScoreboard(board);
+    }
+
+   
+    
     std::cout<<"\nStandard: "<<StandardSquareNumber<<"\nEconomy: "<<EconomicSquareNumber<<"\nLuxury:"<<LuxurySquareNumber<<"\n\n";
 
    
@@ -96,7 +186,7 @@ void func(Player& p){
 void firstRow(std::string board[ROW][COL]){
     srand(time(NULL));
     for(int j =2; j<COL-1; j++){
-        int value = std::rand() % 3 +1;
+        int value = std::rand() % 3 + 1;
         if((value == 1 || StandardSquareNumber<0 || EconomicSquareNumber<0 )&& LuxurySquareNumber>0)
         {
             board[1][j] = L.ShowSquare();
@@ -119,7 +209,7 @@ void firstRow(std::string board[ROW][COL]){
 }
 
 void lastRow(std::string board[ROW][COL]){
-
+    srand(time(NULL));
     for(int j =2; j<COL-1; j++){
         
         int value = std::rand() % 3 +1;
@@ -145,19 +235,20 @@ void lastRow(std::string board[ROW][COL]){
 }
 
 void firstCol(std::string board[ROW][COL]){
+    srand(time(NULL));
     for(int i = 2; i<ROW-1; i++){
         int value = std::rand() % 3 +1;
-        if((value == 1 || StandardSquareNumber<0 || LuxurySquareNumber<0 )&& EconomicSquareNumber>0)
+        if((value == 1 || StandardSquareNumber<1 || LuxurySquareNumber<1 )&& EconomicSquareNumber>0)
         {
             board[i][1] = E.ShowSquare();
             EconomicSquareNumber--;
         }
-        else if((value == 2 || EconomicSquareNumber<0 || LuxurySquareNumber<0 ) && StandardSquareNumber>0)
+        else if((value == 2 || EconomicSquareNumber<1 || LuxurySquareNumber<1 ) && StandardSquareNumber>0)
         {
             board[i][1] = S.ShowSquare();
             StandardSquareNumber--;
         }
-        else if ((value == 3 || StandardSquareNumber<0 || EconomicSquareNumber<0) && LuxurySquareNumber>0){
+        else if ((value == 3 || StandardSquareNumber<1 || EconomicSquareNumber<1) && LuxurySquareNumber>0){
             board[i][1] = L.ShowSquare();
             LuxurySquareNumber--;
         }else{
@@ -169,20 +260,22 @@ void firstCol(std::string board[ROW][COL]){
 }
 
 void lastCol(std::string board[ROW][COL]){
+    srand(time(NULL));
+
     for(int i = 2; i<ROW-1; i++){
 
-        int value = std::rand() % 3 +1;
-        if((value == 1 || StandardSquareNumber<0 || LuxurySquareNumber<0 )&& EconomicSquareNumber>0)
+        int value = std::rand() % 3 + 1;
+        if((value == 1 || StandardSquareNumber<1|| LuxurySquareNumber<1 )&& EconomicSquareNumber>0)
         {
             board[i][COL-1] = E.ShowSquare();
             EconomicSquareNumber--;
         }
-        else if((value == 2 || EconomicSquareNumber<0 || LuxurySquareNumber<0 ) && StandardSquareNumber>0)
+        else if((value == 2 || EconomicSquareNumber<1 || LuxurySquareNumber<1 ) && StandardSquareNumber>0)
         {
             board[i][COL-1] = S.ShowSquare();
             StandardSquareNumber--;
         }
-        else if ((value == 3 || StandardSquareNumber<0 || EconomicSquareNumber<0) && LuxurySquareNumber>0){
+        else if ((value == 3 || StandardSquareNumber<1 || EconomicSquareNumber<1) && LuxurySquareNumber>0){
             board[i][COL-1] = L.ShowSquare();
             LuxurySquareNumber--;
         }else{
@@ -198,7 +291,7 @@ void printScoreboard(std::string board[ROW][COL]){
     for(int i=0; i<ROW; i++){
         for(int j=0; j<COL; j++){
             if(i==1 && j>0 || i == ROW-1 && j>0 || j==1  && i>0 || j == COL-1 && i>1)
-                std::cout<<"| "<<board[i][j]<<" |"<<"\t";
+                std::cout<<"| "<<std::setw(2) <<board[i][j]<<" |"<<"\t";
             else
                 std::cout<<"  "<<board[i][j]<<"  "<<"\t";
 

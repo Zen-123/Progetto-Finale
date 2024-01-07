@@ -16,6 +16,14 @@ public:
 
     ~Square() {}
 
+    char getCharHome(){
+        return '*';
+    }
+
+    char getCharHotel(){
+        return '^';
+    }
+
     virtual char ShowSquare() = 0;
 
 };
