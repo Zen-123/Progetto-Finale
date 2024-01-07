@@ -10,7 +10,6 @@
 int main(){
 
     Player P;
-
     func(P);
 }
 

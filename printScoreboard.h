@@ -24,7 +24,7 @@ void printScoreboard(std::string board[ROW][COL]);
 void fillAllSquaresColumn(std::string board[ROW][COL], int index, int position );
 void fillAllSquaresRows(std::string board[ROW][COL], int index, int position );
 
-
+void removePrevChar(std::string board[ROW][COL]);
 
 void func(Player& p){
 
@@ -60,24 +60,25 @@ void func(Player& p){
             board[i][j] = ' ';
         }
     }
-    
+
+
     printScoreboard(board);
 
     std::cout<<"\n\n-------------------------\n\n";
-    int move;
-
     //TEST SPOSTAMENTO GIOCATORE CON SUCCESSIVA VISUALIZZAZIONE
 
-    int diffCol, diffRow;
-    int n, i, j;       
+    //VARIABILI USATE PER TEST SPOSTAMENTO
+    int diffCol, diffRow, move, n, i ,j;
 
-
-
+    //GIRO GESTITO IN SENSO ORARIO PARTENDO DA POSIZIONE [1][1] = " P "
     while(n != 1){
-        move = p.throwDice();
+
+        //FUNZIONE PER ELIMINARE PRECEDENTE POSIZIONE NEL TABELLONE
+        removePrevChar(board);
+
+        move = p.throwDice(); 
         std::cout<<"Dado: "<<move<<"\n\n";
-        //OK!
-        if(p.getPositionI() == 1  ){
+        if(p.getPositionI() == 1  ){  //GESTIONE SPOSTAMENTO PRIMA RIGA
             j = p.getPositionJ();
             if((j+move+1) > COL-1 ){
                 diffCol = (COL-1) - (j);
@@ -95,8 +96,8 @@ void func(Player& p){
                 p.setPosition(1, j+move);
                 board[1][j+move] += "1";
             }
-            //OK!
-        }else if(p.getPositionJ() == COL-1 ){
+            
+        }else if(p.getPositionJ() == COL-1 ){  //GESTIONE SPOSTAMENTO ULTIMA COLONNA
             i = p.getPositionI();
             if((i+move) > ROW-1){
                 diffRow = move - ((COL-1) - i);
@@ -117,8 +118,7 @@ void func(Player& p){
                 p.setPosition(i+move, COL-1);
 
             }
-            
-        }else if(p.getPositionI() == ROW-1){
+        }else if(p.getPositionI() == ROW-1){  //GESTIONE SPOSTAMENTO ULTIMA RIGA
             j = p.getPositionJ();
             if((j-move) < 1){
                 diffCol =move - (j-1);
@@ -136,22 +136,19 @@ void func(Player& p){
                 board[ROW-1][j-move] += "1";
                 p.setPosition(ROW-1, j-move);
 
-            }    
-                
-        }else if(p.getPositionJ() == 1){
+            }  
+        }else if(p.getPositionJ() == 1){  //GESTIONE SPOSTAMENTO PRIMA COLONNA
             i = p.getPositionI();
             if((i-move) < 1){
-                diffRow = i-2;
-                int tmp = diffRow + (COL-1);
-                j = diffRow+1;
-                if(j > 0){
-                    board[1][j] += "1";
-                    p.setPosition(1, j);
+                diffCol = i-2;
+                move -= diffCol;
+                if(move > COL-1){
+                    move -= (COL-2);
+                    board[move][COL-1] += "1";
+                    p.setPosition(move, COL-1);
                 }else{
-                    diffRow = move - (ROW-1) - (i-2);
-                    i = diffRow+1;
-                    board[i][COL-1] += "1";
-                    p.setPosition(i, COL-1);
+                    board[1][move] += "1";
+                    p.setPosition(1, move);
                 }
             }else{
                 board[i-move][1] += "1";
@@ -161,26 +158,20 @@ void func(Player& p){
         }
         
         printScoreboard(board);
-
         std::cout<<"\nContinuare?  ";
         std::cin>>n;
 
     
     }
 
-   
-    
-    std::cout<<"\nStandard: "<<StandardSquareNumber<<"\nEconomy: "<<EconomicSquareNumber<<"\nLuxury:"<<LuxurySquareNumber<<"\n\n";
-
-   
-
-
 }
 
 /*
-        Se esce 1 -- casella Luxury
-        Se esce 2 -- casella Economic
-        Se esce 3 -- casella Standard
+    Valori random associati alle varie caselle: 
+
+    Se esce 1 -- casella Luxury
+    Se esce 2 -- casella Economic
+    Se esce 3 -- casella Standard
 */
 
 void firstRow(std::string board[ROW][COL]){
@@ -443,6 +434,19 @@ void fillAllSquaresRows(std::string board[ROW][COL], int j, int position ){
                 }
             }
         }  
+}
+
+void removePrevChar(std::string board[ROW][COL]){
+
+     for(int i=0; i<ROW; i++){
+        for(int j=0; j<COL; j++){
+            if(i==1 && j>0 || i == ROW-1 && j>0 || j==1  && i>0 || j == COL-1 && i>1)
+                if(board[i][j].substr(1, 1) == "1" ){
+                    board[i][j].erase(1,1);
+                }
+        }
+    }
+    std::cout<<"\n\n";
 }
 
 
