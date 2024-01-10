@@ -5,6 +5,8 @@ class Square
 {
 protected:
     int price;
+    int homePrice;
+    int hotelPrice;
     std::string player;
     std::string SquareType;
     char home = '*';
@@ -21,12 +23,38 @@ public:
         return '^';
     }
 
-    virtual int getPrice() = 0;
+    void setPrice(int price){
+        this->price = price;
+    }
+
+    int getPrice(){
+        return this->price;
+    }
+
+    void setSquareType(std::string type){
+        this->SquareType = type;
+    }
 
     virtual std::string ShowSquare() = 0;
 
     void setPlayer(std::string p){
         this->player = p;
+    }
+
+    void setHomePrice(int price){
+        this->homePrice = price;
+    }
+
+    int getHomePrice(){
+        return this->homePrice;
+    }
+
+    void setHotelPrice(int price){
+        this->hotelPrice = price;
+    }
+
+    int getHotelPrice(){
+        return this->hotelPrice;
     }
 
     char buyHouse(std::string p){
@@ -57,26 +85,21 @@ public:
         return this->SquareType;
     }
 
-    int getPrice(){
-        return 0;
-    }
     ~AngularSquare() {}
 
 };
 
 class EconomicSquare : public Square {
-private:
-    std::string SquareType = "E";
-    int price = 6;
 public:
-    EconomicSquare() {}
+    EconomicSquare() {
+        Square::setPrice(6);
+        Square::setHomePrice(3);
+        Square::setHotelPrice(3);
+        Square::setSquareType("E");
+    }
 
     std::string ShowSquare(){
         return this->SquareType;
-    }
-
-    int getPrice(){
-        return this->price;
     }
 
     ~EconomicSquare() {}
@@ -85,11 +108,13 @@ public:
 };
 
 class StandardSquare : public Square {
-private:
-    std::string SquareType = "S";
-    int price = 10;
 public:
-    StandardSquare() {}
+    StandardSquare() {
+        Square::setPrice(10);
+        Square::setHomePrice(5);
+        Square::setHotelPrice(5);
+        Square::setSquareType("S");
+    }
 
     int getPrice(){
         return this->price;
@@ -103,11 +128,13 @@ public:
 };
 
 class LuxurySquare : public Square {
-private:
-    std::string SquareType = "L";
-    int price = 20;
 public:
-    LuxurySquare() {}
+    LuxurySquare() {
+        Square::setPrice(20);
+        Square::setHomePrice(10);
+        Square::setHotelPrice(10);
+        Square::setSquareType("L");
+    }
 
     std::string ShowSquare(){
         return this->SquareType;

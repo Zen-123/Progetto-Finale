@@ -58,7 +58,7 @@ public:
         return this->pos.getPosJ();
     }
 
-    void checkPurchase(std::string square, EconomicSquare& E,StandardSquare& S, LuxurySquare& L ){
+    void checkPurchaseSquare(std::string square, EconomicSquare& E,StandardSquare& S, LuxurySquare& L ){
 
         bool tmp = false;
         if(square.substr(0,1) == "E"){
@@ -87,9 +87,49 @@ public:
         }
 
         if(tmp)
-            std::cout<<"Budget attuale: "<<this->budget<<"\n";
+            std::cout<<"\nBudget attuale: "<<this->budget<<"\n";
         else
-            std::cout<<"Budget non sufficiente!!  \n";
+            std::cout<<"\nBudget non sufficiente!!  \n";
+    }
+
+    void checkPurchaseHouse( std::string board[9][9], EconomicSquare& E,StandardSquare& S, LuxurySquare& L){
+
+        bool tmp = false;
+        int i = this->getPositionI();
+        int j = this->getPositionJ();
+        if(board[i][j].substr(0,1) == "E"){
+            
+            if(this->budget >= E.getHomePrice()){
+                E.setPlayer(this->p);
+                this->budget -= E.getHomePrice();
+                board[i][j] += E.getCharHome();
+                tmp = true;
+            }else
+                tmp = false;
+        }else if(board[i][j].substr(0,1) == "S"){
+            if(this->budget >= S.getHomePrice()){
+                S.setPlayer(this->p);
+                this->budget -= S.getHomePrice();
+                board[i][j] += S.getCharHome();
+                tmp = true;
+            }else   
+                tmp = false;
+            
+        }else if(board[i][j].substr(0,1) == "L"){
+            if(this->budget >= L.getHomePrice()){
+                L.setPlayer(this->p);
+                this->budget -= L.getHomePrice();
+                board[i][j] += L.getCharHome();
+
+                tmp = true;
+            }else
+                tmp = false;
+        }
+
+        if(tmp)
+            std::cout<<"\nBudget attuale: "<<this->budget<<"\n";
+        else
+            std::cout<<"\nBudget non sufficiente!!  \n";
     }
 
     ~Player() {}
