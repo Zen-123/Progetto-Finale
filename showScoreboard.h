@@ -5,16 +5,13 @@ class Square
 {
 protected:
     int price;
-    char SquareType;
-    bool checkPlayerLoss = false;
-    bool checkHouse = false;
-    bool checkHotel = false;
-    bool checkPlayer = false;
+    std::string player;
+    std::string SquareType;
+    char home = '*';
+    char hotel = '^';
 public:
 
     Square(){}
-
-    ~Square() {}
 
     char getCharHome(){
         return '*';
@@ -24,68 +21,106 @@ public:
         return '^';
     }
 
-    virtual char ShowSquare() = 0;
+    virtual int getPrice() = 0;
+
+    virtual std::string ShowSquare() = 0;
+
+    void setPlayer(std::string p){
+        this->player = p;
+    }
+
+    char buyHouse(std::string p){
+        setPlayer(p);
+        return this->home;
+    }
+
+    char buyHotel(std::string p){
+        setPlayer(p);
+        return this->hotel;
+    }
+    
+    std::string getPlayer(){
+        return this->player;
+    }
+    ~Square() {}
 
 };
 
 
 class AngularSquare : public Square {
 private:
-    char SquareType = ' ';
+    std::string SquareType = " ";
 public:
     AngularSquare() {}
 
-    ~AngularSquare() {}
-
-    char ShowSquare(){
+    std::string ShowSquare(){
         return this->SquareType;
     }
+
+    int getPrice(){
+        return 0;
+    }
+    ~AngularSquare() {}
 
 };
 
 class EconomicSquare : public Square {
 private:
-    char SquareType = 'E';
+    std::string SquareType = "E";
     int price = 6;
 public:
     EconomicSquare() {}
 
-    ~EconomicSquare() {}
-
-    char ShowSquare(){
+    std::string ShowSquare(){
         return this->SquareType;
     }
 
+    int getPrice(){
+        return this->price;
+    }
+
+    ~EconomicSquare() {}
+
+  
 };
 
 class StandardSquare : public Square {
 private:
-    char SquareType = 'S';
+    std::string SquareType = "S";
     int price = 10;
 public:
     StandardSquare() {}
 
-    ~StandardSquare() {}
+    int getPrice(){
+        return this->price;
+    }
 
-    char ShowSquare(){
+    std::string ShowSquare(){
         return this->SquareType;
     }
 
+    ~StandardSquare() {}
 };
 
 class LuxurySquare : public Square {
 private:
-    char SquareType = 'L';
+    std::string SquareType = "L";
     int price = 20;
 public:
     LuxurySquare() {}
 
-    ~LuxurySquare() {}
-
-    char ShowSquare(){
+    std::string ShowSquare(){
         return this->SquareType;
     }
 
+     int getPrice(){
+        return this->price;
+    }
+
+    ~LuxurySquare() {}
+
 };
+
+#include "player.h"
 
 #endif

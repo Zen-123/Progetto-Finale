@@ -17,27 +17,26 @@ struct Position{
 class Player{
 private:
     int budget = 100;
-    char P = '1';
+    std::string p;
     Position pos;
 public:
 
-    Player() {
+    Player(){
+        setPosition(1,1);
+    }
+
+    Player(std::string p): p{p}{
         setPosition(1,1);
     }
 
     int throwDice(){
-
-        srand(time(NULL));
         int first = std::rand()%6+1;
         int second = std::rand()%6+1;
-
-
         return (first + second);
-
     }
 
-    char getChar(){
-        return this->P;
+    std::string getChar(){
+        return this->p;
     }
 
     void setPosition(int i, int j){
@@ -59,42 +58,66 @@ public:
         return this->pos.getPosJ();
     }
 
+    void checkPurchase(std::string square, EconomicSquare& E,StandardSquare& S, LuxurySquare& L ){
+
+        bool tmp = false;
+        if(square.substr(0,1) == "E"){
+            
+            if(this->budget >= E.getPrice()){
+                E.setPlayer(this->p);
+                this->budget -= E.getPrice();
+                tmp = true;
+            }else
+                tmp = false;
+        }else if(square.substr(0,1) == "S"){
+            if(this->budget >= S.getPrice()){
+                S.setPlayer(this->p);
+                this->budget -= S.getPrice();
+                tmp = true;
+            }else   
+                tmp = false;
+            
+        }else if(square.substr(0,1) == "L"){
+            if(this->budget >= L.getPrice()){
+                L.setPlayer(this->p);
+                this->budget -= L.getPrice();
+                tmp = true;
+            }else
+                tmp = false;
+        }
+
+        if(tmp)
+            std::cout<<"Budget attuale: "<<this->budget<<"\n";
+        else
+            std::cout<<"Budget non sufficiente!!  \n";
+    }
 
     ~Player() {}
 };
 
 
-    class HumanPlayer : public Player{
-
-    public:
-
-    HumanPlayer(){}
-
-    ~HumanPlayer() {}
-};
-
 class ComputerPlayer : public Player{
-
 public:
 
-    ComputerPlayer(){}
+    ComputerPlayer(std::string p):Player(p){}
+
+    bool randomChoice(){
+        
+        srand(time(NULL));
+        //se esce 1 si considera la scelta positiva mentre per tutti gli altri valori la scelta è negativa
+        int choice = std::rand() % 4 + 1;
+
+        if(choice == 1 )
+            return true;
+        else
+            return false;
+    }
 
     ~ComputerPlayer() {}
 
 };
-    void startGameHuman(){
-        HumanPlayer P1;
-        ComputerPlayer P2;
-        ComputerPlayer P3;
-        ComputerPlayer P4;
-    
-     }
 
-     void startGameComputer(){
-         ComputerPlayer P1;
-         ComputerPlayer P2;
-         ComputerPlayer P3;
-         ComputerPlayer P4;
-    
+
+
 
 #endif
