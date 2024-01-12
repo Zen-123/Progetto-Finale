@@ -19,7 +19,8 @@ int main(int argc, char *argv[])
         if (word == "H" || word == "h")     //TODO: Cambia parola iniziale
         {
             func();
-            
+           
+
 
         }
         else if (word == "C" || word == "c") //TODO: Cambia parola iniziale

@@ -1,26 +1,31 @@
 #ifndef SQUARE_H
 #define SQUARE_H
 
+#include "player.hpp"
+
 class Square
 {
 protected:
     int price;
     int homePrice;
     int hotelPrice;
+    int rentHomePrice;
+    int rentHotelPrice;
     std::string player;
     std::string SquareType;
-    char home = '*';
-    char hotel = '^';
+    std::string home = "*";
+    std::string hotel = "^";
+    Position playerPosition;
 public:
 
     Square(){}
 
-    char getCharHome(){
-        return '*';
+    std::string getCharHome(){
+        return this->home;
     }
 
-    char getCharHotel(){
-        return '^';
+    std::string getCharHotel(){
+        return this->hotel;
     }
 
     void setPrice(int price){
@@ -37,9 +42,12 @@ public:
 
     virtual std::string ShowSquare() = 0;
 
-    void setPlayer(std::string p){
+    void setPlayer(std::string p, int i, int j){
         this->player = p;
+        this->playerPosition.i = i;
+        this->playerPosition.j = j;
     }
+
 
     void setHomePrice(int price){
         this->homePrice = price;
@@ -56,19 +64,34 @@ public:
     int getHotelPrice(){
         return this->hotelPrice;
     }
-
-    char buyHouse(std::string p){
-        setPlayer(p);
-        return this->home;
-    }
-
-    char buyHotel(std::string p){
-        setPlayer(p);
-        return this->hotel;
-    }
     
-    std::string getPlayer(){
-        return this->player;
+    void setRentHome(int price){
+        this->rentHomePrice  = price;
+    }
+
+    int getRentHomePrice(){
+        return this->rentHomePrice;
+    }
+
+    void setRentHotel(int price){
+        this->rentHotelPrice = price;
+    }
+
+    int getRentHotelPrice(){
+        return this->rentHotelPrice;
+    }
+
+    void removePlayerPosition(int i, int j){
+        this->playerPosition.i = 1;
+        this->playerPosition.j = 1;
+        this->player.clear();
+    }
+
+    std::string getPlayer(int i, int j){
+        if(this->playerPosition.i == i && this->playerPosition.j == j)
+            return this->player;
+        else    
+           return " ";
     }
     ~Square() {}
 
@@ -96,6 +119,8 @@ public:
         Square::setHomePrice(3);
         Square::setHotelPrice(3);
         Square::setSquareType("E");
+        Square::setRentHome(2);
+        Square::setRentHotel(4);
     }
 
     std::string ShowSquare(){
@@ -114,6 +139,8 @@ public:
         Square::setHomePrice(5);
         Square::setHotelPrice(5);
         Square::setSquareType("S");
+        Square::setRentHome(4);
+        Square::setRentHotel(8);
     }
 
     int getPrice(){
@@ -134,6 +161,8 @@ public:
         Square::setHomePrice(10);
         Square::setHotelPrice(10);
         Square::setSquareType("L");
+        Square::setRentHome(7);
+        Square::setRentHotel(14);
     }
 
     std::string ShowSquare(){
@@ -148,6 +177,5 @@ public:
 
 };
 
-#include "player.h"
 
 #endif

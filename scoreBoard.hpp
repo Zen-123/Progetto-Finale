@@ -100,7 +100,7 @@ void printScoreboard(std::string board[ROW][COL]){
     for(int i=0; i<ROW; i++){
         for(int j=0; j<COL; j++){
             if(i==1 && j>0 || i == ROW-1 && j>0 || j==1  && i>0 || j == COL-1 && i>1)
-                std::cout<<"| "<<std::setw(3) <<board[i][j]<<" |"<<"\t";
+                std::cout<<"|"<<std::setw(5) <<board[i][j]<<"|"<<"\t";
             else
                 std::cout<<"  "<<board[i][j]<<"  "<<"\t";
 
@@ -111,12 +111,11 @@ void printScoreboard(std::string board[ROW][COL]){
 }
 
 void removePrevChar(std::string board[ROW][COL], ComputerPlayer& player){
-
      for(int i=0; i<ROW; i++){
         for(int j=0; j<COL; j++){
             if(i==1 && j>0 || i == ROW-1 && j>0 || j==1  && i>0 || j == COL-1 && i>1)
-                if(board[i][j].substr(1, 1) == player.getChar() ){
-                    board[i][j].erase(1,1);
+                if(board[i][j].find(player.getChar()) != board[i][j].npos ){
+                    board[i][j].erase(board[i][j].find(player.getChar()), player.getChar().length());
                 }
         }
     }
