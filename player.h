@@ -114,6 +114,20 @@ public:
         
     }
 
+    void logOutput(const std::string& txt) {
+        // Apri il file di log in modalità append
+        std::ofstream fileDiLog("logFile.txt", std::ios::app);
+        
+        // Verifica se il file è aperto prima di scrivere
+        if (fileDiLog.is_open()) {
+            fileDiLog << txt << std::endl;
+            fileDiLog.close();
+        } else {
+            // Gestisci l'errore se il file non può essere aperto
+            std::cerr << "Errore: Impossibile aprire il file di log." << std::endl;
+        }
+    }
+
 
     void checkPurchaseSquare(std::string board[9][9], EconomicSquare& E,StandardSquare& S, LuxurySquare& L ){
 
@@ -147,7 +161,8 @@ public:
         }
 
         if(tmp){
-            std::cout<<"Il giocatore " +  this->playerChar + " ha comprato un terreno! \n";
+            std::cout<<"Il giocatore " +  this->playerChar + " ha acquistato il terreno in " + board[i][j] << endl;
+            logOutput("Il giocatore " +  this->playerChar + " ha acquistato il terreno in " + board[i][j]);
             this->purchasedSquare.push_back(this->pos);
         }else{
 
@@ -199,7 +214,8 @@ public:
             }
 
             if(tmp){
-                std::cout<<"Il giocatore " +  this->playerChar + " ha comprato una casa! \n";
+                std::cout<<"Il giocatore " +  this->playerChar + " ha costruito una casa sul terreno " + board[i][j] << endl;
+                logOutput("Il giocatore " +  this->playerChar + " ha costruito una casa sul terreno " + board[i][j]);
                 this->purchasedSquare.push_back(this->pos);
             }else
                 std::cout<<"Il giocatore " +  this->playerChar + " non ha budget sufficiente per acquistare una casa! \n";
@@ -245,7 +261,8 @@ public:
             }
 
             if(tmp){
-                std::cout<<"\nIl giocatore " + this->playerChar + " ha acquistato un albergo \n";
+                std::cout<<"\nIl giocatore " + this->playerChar + " ha migliorato una casa in albergo sul terreno " + board[i][j] << endl;
+                logOutput("Il giocatore " + this->playerChar + " ha migliorato una casa in albergo sul terreno " + board[i][j]);
                 this->purchasedSquare.push_back(this->pos);
                 if(board[i][j].find(E.getCharHome()) != board[i][j].npos){
                     board[i][j].erase(board[i][j].find(E.getCharHome()), this->playerChar.length());
