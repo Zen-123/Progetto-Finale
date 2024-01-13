@@ -674,14 +674,20 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
                     int rent = E.getRentHomePrice();
                     P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHomePrice();
                     P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                   logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHomePrice();
                     P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }
                 
             }else if(board[i][j].find('^') != board[i][j].npos){
@@ -689,14 +695,20 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
                     int rent = E.getRentHotelPrice();
                     P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHotelPrice();
                     P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHotelPrice();
                     P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }
             }
         }
@@ -704,31 +716,43 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
             if(board[i][j].find('*') != board[i][j].npos){
                 if(player.getPositionChar() == "E"){
                     int rent = E.getRentHomePrice();
-                    P1.decrescenteBudgetRent(rent); 
+                    P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHomePrice();
-                    P1.decrescenteBudgetRent(rent); 
+                    P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHomePrice();
-                    P1.decrescenteBudgetRent(rent); 
+                    P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }
 
             }else if(board[i][j].find('^') != board[i][j].npos){
                  if(player.getPositionChar() == "E"){
                     int rent = E.getRentHotelPrice();
-                    P1.decrescenteBudgetRent(rent); 
+                    P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHotelPrice();
-                    P1.decrescenteBudgetRent(rent); 
+                    P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHotelPrice();
-                    P1.decrescenteBudgetRent(rent); 
+                    P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }
             }
         }
@@ -738,14 +762,20 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
                     int rent = E.getRentHomePrice();
                     P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHomePrice();
                     P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHomePrice();
                     P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }
 
             }else if(board[i][j].find('^') != board[i][j].npos){
@@ -753,14 +783,20 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
                     int rent = E.getRentHotelPrice();
                     P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHotelPrice();
                     P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHotelPrice();
                     P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }
             }
         }
@@ -791,14 +827,20 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
                     int rent = E.getRentHomePrice();
                     P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHomePrice();
                     P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHomePrice();
                     P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }
 
             }else if(board[i][j].find('^') != board[i][j].npos){
@@ -806,14 +848,20 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
                     int rent = E.getRentHotelPrice();
                     P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                      logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHotelPrice();
                     P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                      logOutput("Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHotelPrice();
                     P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                      logOutput("Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }
             }
         }
@@ -821,31 +869,43 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
             if(board[i][j].find('*') != board[i][j].npos){
                 if(player.getPositionChar() == "E"){
                     int rent = E.getRentHomePrice();
-                    P2.decrescenteBudgetRent(rent); 
+                    P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHomePrice();
-                    P2.decrescenteBudgetRent(rent); 
+                    P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHomePrice();
-                    P2.decrescenteBudgetRent(rent); 
+                    P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }
 
             }else if(board[i][j].find('^') != board[i][j].npos){
                  if(player.getPositionChar() == "E"){
                     int rent = E.getRentHotelPrice();
-                    P2.decrescenteBudgetRent(rent); 
+                    P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHotelPrice();
-                    P2.decrescenteBudgetRent(rent); 
+                    P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHotelPrice();
-                    P2.decrescenteBudgetRent(rent); 
+                    P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }
             }
         }
@@ -853,31 +913,43 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
             if(board[i][j].find('*') != board[i][j].npos){
                 if(player.getPositionChar() == "E"){
                     int rent = E.getRentHomePrice();
-                    P2.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHomePrice();
-                    P2.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHomePrice();
-                    P2.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }
 
             }else if(board[i][j].find('^') != board[i][j].npos){
                  if(player.getPositionChar() == "E"){
                     int rent = E.getRentHotelPrice();
-                    P2.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHotelPrice();
-                    P2.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHotelPrice();
-                    P2.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }
             }
         }
@@ -908,31 +980,43 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
             if(board[i][j].find('*') != board[i][j].npos){
                 if(player.getPositionChar() == "E"){
                     int rent = E.getRentHomePrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHomePrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHomePrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }
 
             }else if(board[i][j].find('^') != board[i][j].npos){
                  if(player.getPositionChar() == "E"){
                     int rent = E.getRentHotelPrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                      logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHotelPrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                      logOutput("Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHotelPrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                      logOutput("Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }
             }
         }
@@ -940,31 +1024,43 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
             if(board[i][j].find('*') != board[i][j].npos){
                 if(player.getPositionChar() == "E"){
                     int rent = E.getRentHomePrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHomePrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                   logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHomePrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }
-
+                
             }else if(board[i][j].find('^') != board[i][j].npos){
                  if(player.getPositionChar() == "E"){
                     int rent = E.getRentHotelPrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHotelPrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHotelPrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }
             }
         }
@@ -972,31 +1068,43 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
             if(board[i][j].find('*') != board[i][j].npos){
                 if(player.getPositionChar() == "E"){
                     int rent = E.getRentHomePrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHomePrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHomePrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }
 
             }else if(board[i][j].find('^') != board[i][j].npos){
                  if(player.getPositionChar() == "E"){
                     int rent = E.getRentHotelPrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHotelPrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHotelPrice();
-                    P3.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P4.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 4 per pernottamento nella casella " board[i][j]<< endl
                 }
             }
         }
@@ -1028,31 +1136,43 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
             if(board[i][j].find('*') != board[i][j].npos){
                 if(player.getPositionChar() == "E"){
                     int rent = E.getRentHomePrice();
-                    P4.decrescenteBudgetRent(rent); 
+                    P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHomePrice();
-                    P4.decrescenteBudgetRent(rent); 
+                    P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHomePrice();
-                    P4.decrescenteBudgetRent(rent); 
+                    P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }
 
             }else if(board[i][j].find('^') != board[i][j].npos){
                  if(player.getPositionChar() == "E"){
                     int rent = E.getRentHotelPrice();
-                    P4.decrescenteBudgetRent(rent); 
+                    P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                      logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHotelPrice();
-                    P4.decrescenteBudgetRent(rent); 
+                    P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                      logOutput("Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHotelPrice();
-                    P4.decrescenteBudgetRent(rent); 
+                    P2.decrescenteBudgetRent(rent); 
                     P1.increaseBudgetRent(rent);
+                      logOutput("Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 1 per pernottamento nella casella " board[i][j]<< endl;
                 }
             }
         }
@@ -1060,31 +1180,43 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
             if(board[i][j].find('*') != board[i][j].npos){
                 if(player.getPositionChar() == "E"){
                     int rent = E.getRentHomePrice();
-                    P4.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl;
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHomePrice();
-                    P4.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                   logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHomePrice();
-                    P4.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }
-
+                
             }else if(board[i][j].find('^') != board[i][j].npos){
                  if(player.getPositionChar() == "E"){
                     int rent = E.getRentHotelPrice();
-                    P4.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHotelPrice();
-                    P4.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHotelPrice();
-                    P4.decrescenteBudgetRent(rent); 
+                    P1.decrescenteBudgetRent(rent); 
                     P2.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 2 per pernottamento nella casella " board[i][j]<< endl
                 }
             }
         }
@@ -1094,14 +1226,20 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
                     int rent = E.getRentHomePrice();
                     P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 2 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHomePrice();
                     P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHomePrice();
                     P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                    logOutput("Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 7 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }
 
             }else if(board[i][j].find('^') != board[i][j].npos){
@@ -1109,14 +1247,20 @@ void rent(ComputerPlayer& player, std::string board[ROW][COL]){
                     int rent = E.getRentHotelPrice();
                     P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 4 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "S"){
                     int rent = S.getRentHotelPrice();
                     P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 8 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }else if(player.getPositionChar() == "L"){
                     int rent = L.getRentHotelPrice();
                     P4.decrescenteBudgetRent(rent); 
                     P3.increaseBudgetRent(rent);
+                     logOutput("Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]);
+                    std::cout << "Giocatore " + player.getChar() + " ha pagato 14 fiorini a giocatore 3 per pernottamento nella casella " board[i][j]<< endl
                 }
             }
         }
