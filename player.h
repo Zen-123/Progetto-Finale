@@ -301,6 +301,34 @@ public:
 
 };
 
+class HumanPlayer : public Player {
+public:
+    HumanPlayer(std::string p) : Player(p) {}
+
+    // Funzione che richiede all'utente di fare una scelta (true o false)
+    bool getUserChoice() {
+        char userInput;
+        if((board[i][j].substr(0, 1) == "E" || board[i][j].substr(0, 1) == "S" || board[i][j].substr(0, 1) == "L")){
+                    if(board[i][j].find('*') != board[i][j].npos)
+                        std::cout << "Vuoi costruire una casa? (S per sì, N per no): ";
+
+                    else   
+                        std::cout << "Vuoi costruire un albergo? (S per sì, N per no): ";
+                    }
+                }
+                std::cin >> userInput;
+
+        // Converte l'input dell'utente in minuscolo per gestire sia 'S' che 's'
+        return (std::tolower(userInput) == 's');
+    }
+
+    // Override della funzione randomChoice con la logica di input da parte dell'utente
+    bool randomChoice() override {
+        return getUserChoice();
+    }
+
+    ~HumanPlayer() {}
+};
 // bool cmpPosition(const Position& a, const Position& b){  //funzione che compara i valori interi tra due pair per ordinamento da maggiore a minore
 //     return a == b;
 // }
