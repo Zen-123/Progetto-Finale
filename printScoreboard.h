@@ -119,6 +119,7 @@ void func(){
         if(order[countTurn] == P1.getChar()){
             removePrevChar(board,P1);
             std::cout<<"Turno Giocatore " + P1.getChar()+ "\n";
+            logOutput("Turno Giocatore " + P1.getChar());
             setPosition(P1, board);
                 if(P1.randomChoice() == true){
                     i = P1.getPositionI();
@@ -138,6 +139,7 @@ void func(){
 
             if(P1.checkIfBankrupt()){
                 std::cout<<"Giocatore " + P1.getChar() + " è andato il bancarotta!\n";
+                logOutput("Giocatore " + P1.getChar() + " è andato il bancarotta!");
                 checkIfBankrupt = true;
                 order->erase(std::remove(order->begin(), order->end(), '1'), order->end());
                 P1.removePlayerCharIfBankrupt(board,E,S,L);
@@ -147,6 +149,7 @@ void func(){
         }else if(order[countTurn] == P2.getChar()){
             removePrevChar(board,P2);
             std::cout<<"Turno Giocatore " + P2.getChar()+ "\n";
+            logOutput("Turno Giocatore " + P2.getChar());
             setPosition(P2, board);
             if(P2.randomChoice() == true){
                 i = P2.getPositionI();
@@ -163,6 +166,7 @@ void func(){
             P2.printStatus();
             if(P2.checkIfBankrupt()){
                 std::cout<<"Giocatore " + P2.getChar() + " è andato il bancarotta!\n";
+                logOutput("Giocatore " + P2.getChar() + " è andato il bancarotta!");
 
                 checkIfBankrupt = true;
                 order->erase(std::remove(order->begin(), order->end(), '2'), order->end());
@@ -172,6 +176,7 @@ void func(){
         }else if(order[countTurn] == P3.getChar()){
             removePrevChar(board,P3);
             std::cout<<"Turno Giocatore " + P3.getChar()+ "\n";
+            logOutput("Turno Giocatore " + P3.getChar());
             setPosition(P3, board);
             if(P3.randomChoice() == true){
                 i = P3.getPositionI();
@@ -188,6 +193,7 @@ void func(){
             P3.printStatus();
               if(P3.checkIfBankrupt()){
                 std::cout<<"Giocatore " + P3.getChar() + " è andato il bancarotta!\n";
+                logOutput("Giocatore " + P3.getChar() + " è andato il bancarotta!");
 
                 checkIfBankrupt = true;
                 order->erase(std::remove(order->begin(), order->end(), '3'), order->end());
@@ -196,6 +202,7 @@ void func(){
         }else if(order[countTurn] == P4.getChar()){
             removePrevChar(board,P4);
             std::cout<<"Turno Giocatore " + P4.getChar()+ "\n";
+            logOutput("Turno Giocatore " + P4.getChar());
             setPosition(P4, board);
             if(P4.randomChoice() == true){
                 i = P4.getPositionI();
@@ -212,6 +219,7 @@ void func(){
             P4.printStatus();
             if(P4.checkIfBankrupt()){
                 std::cout<<"Giocatore " + P4.getChar() + " è andato il bancarotta!\n";
+                logOutput("Giocatore " + P4.getChar() + " è andato il bancarotta!");
 
                 checkIfBankrupt = true;
                 order->erase(std::remove(order->begin(), order->end(), '4'), order->end());
