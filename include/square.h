@@ -1,7 +1,7 @@
 #ifndef SQUARE_H
 #define SQUARE_H
 
-#include "player.hpp"
+#include "../include/position.h"
 
 class Square
 {
@@ -42,11 +42,7 @@ public:
 
     virtual std::string ShowSquare() = 0;
 
-    void setPlayer(std::string p, int i, int j){
-        this->player = p;
-        this->playerPosition.i = i;
-        this->playerPosition.j = j;
-    }
+    void setPlayer(std::string p, int i, int j);
 
 
     void setHomePrice(int price){
@@ -81,18 +77,10 @@ public:
         return this->rentHotelPrice;
     }
 
-    void removePlayerPosition(int i, int j){
-        this->playerPosition.i = 1;
-        this->playerPosition.j = 1;
-        this->player.clear();
-    }
+    void removePlayerPosition(int i, int j);
 
-    std::string getPlayer(int i, int j){
-        if(this->playerPosition.i == i && this->playerPosition.j == j)
-            return this->player;
-        else    
-           return " ";
-    }
+    std::string getPlayer(int i, int j);
+
     ~Square() {}
 
 };
@@ -114,14 +102,8 @@ public:
 
 class EconomicSquare : public Square {
 public:
-    EconomicSquare() {
-        Square::setPrice(6);
-        Square::setHomePrice(3);
-        Square::setHotelPrice(3);
-        Square::setSquareType("E");
-        Square::setRentHome(2);
-        Square::setRentHotel(4);
-    }
+
+    EconomicSquare();
 
     std::string ShowSquare(){
         return this->SquareType;
@@ -134,14 +116,7 @@ public:
 
 class StandardSquare : public Square {
 public:
-    StandardSquare() {
-        Square::setPrice(10);
-        Square::setHomePrice(5);
-        Square::setHotelPrice(5);
-        Square::setSquareType("S");
-        Square::setRentHome(4);
-        Square::setRentHotel(8);
-    }
+    StandardSquare();
 
     int getPrice(){
         return this->price;
@@ -156,14 +131,7 @@ public:
 
 class LuxurySquare : public Square {
 public:
-    LuxurySquare() {
-        Square::setPrice(20);
-        Square::setHomePrice(10);
-        Square::setHotelPrice(10);
-        Square::setSquareType("L");
-        Square::setRentHome(7);
-        Square::setRentHotel(14);
-    }
+    LuxurySquare();
 
     std::string ShowSquare(){
         return this->SquareType;
@@ -177,5 +145,6 @@ public:
 
 };
 
+#include "square.hpp"
 
 #endif

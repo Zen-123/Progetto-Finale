@@ -5,9 +5,9 @@
 #include <ctime>
 #include <iomanip>
 #include <fstream>
-#include "../include/showScoreboard.h"
+#include "../include/square.h"
 #include "../include/player.h"
-#include "../include/printScoreboard.h"
+#include "../include/game.h"
 
 
 
@@ -18,14 +18,14 @@ int main(int argc, char *argv[])
     if (argc > 1)
     {
         std::string word = argv[1];
-        if (word == "H" || word == "h")     //TODO: Cambia parola iniziale
+        if (word == "Human" || word == "human")   
         {
-            gameType =true;
+            gameType = true;
             game(gameType);
 
 
         }
-        else if (word == "C" || word == "c") //TODO: Cambia parola iniziale
+        else if (word == "Computer" || word == "computer") 
         {
 
            game(gameType);
@@ -37,5 +37,4 @@ int main(int argc, char *argv[])
         }
     }
 
-    // func(P);
 }
