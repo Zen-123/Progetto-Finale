@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Monopoly.dir/src/monopoly.cpp.o -o Monopoly 

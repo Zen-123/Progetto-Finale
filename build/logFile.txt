@@ -1,0 +1,678 @@
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in S1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in L3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in L2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in L4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in E2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in L4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in E2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in S2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S14
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in L2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in E432
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in L1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in E2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S14
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in L2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in E432
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in L1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in E2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in E2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in E2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in L3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in E23
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in E2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in L3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in E2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in L3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in L1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in L1
+Giocatore 1 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in L1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in E13
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in S1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in L32
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in S1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in S3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in S1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in S3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in L32
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in S1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in S3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in S1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in S3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in E1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in E43
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in L13
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in E1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in E43
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in L13
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in S4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in L42
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Il giocatore 1 ha acquistato il terreno in L1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in S42
+Giocatore 2 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 3
+Il giocatore 3 ha acquistato il terreno in S3
+Giocatore 3 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in L2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Il giocatore 4 ha acquistato il terreno in E34
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in E2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Il giocatore 2 ha acquistato il terreno in L2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
+Turno Giocatore 1
+Giocatore 1 ha finito il turno
+Turno Giocatore 2
+Giocatore 2 ha finito il turno
+Turno Giocatore 3
+Giocatore 3 ha finito il turno
+Turno Giocatore 4
+Giocatore 4 ha finito il turno
