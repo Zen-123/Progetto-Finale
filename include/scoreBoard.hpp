@@ -55,15 +55,19 @@ void checkDiceNumber(std::map<std::string, int>& mp){
     
 }
 
-void setTurn(std::string order[4]){  
+void setTurn(std::string order[4], bool gameType){  
 
     std::map<std::string, int> mp;  //mappa che crea entry (string, int) dove la string identifica il player, int il valore di dado lanciato
     
     bool check = false;
     srand(time(NULL));
 
+    if(gameType)
+        mp["1"] = HP.throwDice();
+    else
+        mp["1"] = P1.throwDice();
 
-    mp["1"] = P1.throwDice();
+    
     mp["2"] = P2.throwDice();
     mp["3"] = P3.throwDice();
     mp["4"] = P4.throwDice();
@@ -110,7 +114,7 @@ void printScoreboard(std::string board[ROW][COL]){
     }
 }
 
-void removePrevChar(std::string board[ROW][COL], ComputerPlayer& player){
+void removePrevChar(std::string board[ROW][COL], Player& player){
      for(int i=0; i<ROW; i++){
         for(int j=0; j<COL; j++){
             if(i==1 && j>0 || i == ROW-1 && j>0 || j==1  && i>0 || j == COL-1 && i>1)

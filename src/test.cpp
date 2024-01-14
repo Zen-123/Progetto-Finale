@@ -4,31 +4,32 @@
 #include <algorithm>
 #include <ctime>
 #include <iomanip>
-#include "showScoreboard.h"
-#include "player.h"
-#include "printScoreboard.h"
+#include <fstream>
+#include "../include/showScoreboard.h"
+#include "../include/player.h"
+#include "../include/printScoreboard.h"
 
 
 
 int main(int argc, char *argv[])
 {
 
+    bool gameType = false;  //valore booleano per gestire partita con giocatore umano o con 4 giocatori computer, settato a true se si vuole giocare con un player umano
     if (argc > 1)
     {
         std::string word = argv[1];
         if (word == "H" || word == "h")     //TODO: Cambia parola iniziale
         {
-            func();
-           
+            gameType =true;
+            game(gameType);
 
 
         }
         else if (word == "C" || word == "c") //TODO: Cambia parola iniziale
         {
-            std::cout << "Giocatori Computer! \n";
-            ComputerPlayer P2("2");
-            ComputerPlayer P3("3");
-            ComputerPlayer P4("4");
+
+           game(gameType);
+
         }
         else
         {

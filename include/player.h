@@ -1,11 +1,10 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "player.hpp"
 
 
 class Player{
-private:
+protected:
     int budget = 100;
     std::string playerChar;
     Position pos;
@@ -115,17 +114,21 @@ public:
     }
 
     void logOutput(const std::string& txt) {
-        // Apri il file di log in modalità append
-        std::ofstream fileDiLog("logFile.txt", std::ios::app);
+        // Apri il file di log in modalità appendd
+        std::ofstream fileDiLog ("logFile.txt", std::ios::app);
         
         // Verifica se il file è aperto prima di scrivere
         if (fileDiLog.is_open()) {
             fileDiLog << txt << std::endl;
+            fileDiLog.clear();
             fileDiLog.close();
         } else {
             // Gestisci l'errore se il file non può essere aperto
             std::cerr << "Errore: Impossibile aprire il file di log." << std::endl;
         }
+
+
+
     }
 
 
@@ -139,7 +142,6 @@ public:
             if(this->budget >= E.getPrice()){
                 E.setPlayer(this->playerChar, i, j);
                 this->budget -= E.getPrice();
-                this->setPosition(i, j, "E");
                 tmp = true;
             }
          
@@ -147,7 +149,6 @@ public:
             if(this->budget >= S.getPrice()){
                 S.setPlayer(this->playerChar, i, j);
                 this->budget -= S.getPrice();
-                this->setPosition(i, j, "S");
                 tmp = true;
             }
                 
@@ -155,13 +156,12 @@ public:
             if(this->budget >= L.getPrice()){
                 L.setPlayer(this->playerChar, i, j);
                 this->budget -= L.getPrice();
-                this->setPosition(i, j, "L");
                 tmp = true;
             }
         }
 
         if(tmp){
-            std::cout<<"Il giocatore " +  this->playerChar + " ha acquistato il terreno in " + board[i][j] << endl;
+            std::cout<<"Il giocatore " +  this->playerChar + " ha acquistato il terreno in "<<i<<" - "<<j<<" di tipo " + board[i][j] <<"\n";
             logOutput("Il giocatore " +  this->playerChar + " ha acquistato il terreno in " + board[i][j]);
             this->purchasedSquare.push_back(this->pos);
         }else{
@@ -172,6 +172,8 @@ public:
                 std::cout<<"Il giocatore " +  this->playerChar + " non ha budget a sufficienza per acquistare il terreno! \n";
 
         }
+
+        this->setPosition(i, j, board[i][j].substr(0,1));
 
         
         
@@ -214,7 +216,7 @@ public:
             }
 
             if(tmp){
-                std::cout<<"Il giocatore " +  this->playerChar + " ha costruito una casa sul terreno " + board[i][j] << endl;
+                std::cout<<"Il giocatore " +  this->playerChar + " ha acquistato una casa sul terreno "<<i<<" - "<<j<<" di tipo " + board[i][j] <<"\n";
                 logOutput("Il giocatore " +  this->playerChar + " ha costruito una casa sul terreno " + board[i][j]);
                 this->purchasedSquare.push_back(this->pos);
             }else
@@ -261,7 +263,7 @@ public:
             }
 
             if(tmp){
-                std::cout<<"\nIl giocatore " + this->playerChar + " ha migliorato una casa in albergo sul terreno " + board[i][j] << endl;
+                std::cout<<"\nIl giocatore " + this->playerChar + " ha migliorato una casa in albergo sul terreno " <<i<<" - "<<j<<" di tipo " + board[i][j] <<"\n";
                 logOutput("Il giocatore " + this->playerChar + " ha migliorato una casa in albergo sul terreno " + board[i][j]);
                 this->purchasedSquare.push_back(this->pos);
                 if(board[i][j].find(E.getCharHome()) != board[i][j].npos){
@@ -280,14 +282,39 @@ public:
     }
 
     void printStatus(){
-        std::cout<<"Giocatore "<<this->playerChar<<"\n";
-        std::cout<<"Budget attuale: "<<this->budget<<"\n";
-        std::cout<<"Caselle acquistate: \n";
-        for(auto it = this->purchasedSquare.begin(); it != this->purchasedSquare.end(); it++)
-            std::cout<<it->charSqare<< ":  "<<it->i<<" - "<<it->j<<"\n";
-
-        std::cout<<"\n\n----------------------\n\n";
-    
+        std::cout<<"Giocatore "<<this->playerChar<<": ";
+        for(auto it = this->purchasedSquare.begin(); it != this->purchasedSquare.end(); it++){
+            switch (it->i)
+            {
+            case 1:
+                std::cout<<"A"<<it->j<<" ";;
+                break;
+            case 2:
+                std::cout<<"B"<<it->j<<" ";;
+                break;
+            case 3:
+                std::cout<<"C"<<it->j<<" ";;
+                break;
+            case 4:
+                std::cout<<"D"<<it->j<<" ";;
+                break;
+            case 5:
+                std::cout<<"E"<<it->j<<" ";;
+                break;
+            case 6:
+                std::cout<<"F"<<it->j<<" ";;
+                break;
+            case 7:
+                std::cout<<"G"<<it->j<<" ";;
+                break;
+            case 8:
+                std::cout<<"H"<<it->j<<" ";
+                break;
+            default:
+                break;
+            }
+        }
+    std::cout<<"\n";
     }
 
     std::vector<Position> getProperty(){
@@ -323,32 +350,43 @@ public:
     HumanPlayer(std::string p) : Player(p) {}
 
     // Funzione che richiede all'utente di fare una scelta (true o false)
-    bool getUserChoice() {
+    bool getUserChoice(std::string board[9][9], EconomicSquare E, StandardSquare S, LuxurySquare L) {
+        int i = this->getPositionI();
+        int j = this->getPositionJ();
         char userInput;
+
         if((board[i][j].substr(0, 1) == "E" || board[i][j].substr(0, 1) == "S" || board[i][j].substr(0, 1) == "L")){
-                    if(board[i][j].find('*') != board[i][j].npos)
-                        std::cout << "Vuoi costruire una casa? (S per sì, N per no): ";
+            if(std::find(this->purchasedSquare.begin(), this->purchasedSquare.end(), this->pos) != this->purchasedSquare.end()){
 
-                    else   
-                        std::cout << "Vuoi costruire un albergo? (S per sì, N per no): ";
-                    }
-                }
-                std::cin >> userInput;
+                if(board[i][j].find('*') != board[i][j].npos){
+                    std::cout << "Vuoi costruire un albergo? (S per sì, N per no): ";
 
+                }else{
+                    std::cout << "Vuoi costruire una casa? (S per sì, N per no): ";
+
+                } 
+            }else if(E.getPlayer(i, j) == " " || S.getPlayer(i, j) == " " || L.getPlayer(i, j) == " "){
+                std::cout << "Vuoi acquistare il terreno? (S per sì, N per no): ";
+            }
+            std::cin >> userInput;
+        }else{
+            std::cout<<"Ti trovi su una casella angolare!\n";
+        }
+        std::string temp;
+        std::getline(std::cin, temp);
         // Converte l'input dell'utente in minuscolo per gestire sia 'S' che 's'
         return (std::tolower(userInput) == 's');
     }
 
     // Override della funzione randomChoice con la logica di input da parte dell'utente
-    bool randomChoice() override {
-        return getUserChoice();
-    }
+    // bool randomChoice() override {
+    //     return getUserChoice();
+    // }
 
     ~HumanPlayer() {}
 };
-// bool cmpPosition(const Position& a, const Position& b){  //funzione che compara i valori interi tra due pair per ordinamento da maggiore a minore
-//     return a == b;
-// }
+
+#include "player.hpp"
 
 
 
