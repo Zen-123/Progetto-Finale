@@ -1,3 +1,0 @@
-/home/andreazanin/Documents/ProgettoFinale/build/CMakeFiles/Monopoly.dir
-/home/andreazanin/Documents/ProgettoFinale/build/CMakeFiles/edit_cache.dir
-/home/andreazanin/Documents/ProgettoFinale/build/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,4 @@
+//ALESSANDRO MARANGON
 #ifndef POSITION_HPP
 #define POSITION_HPP
 
@@ -7,19 +8,13 @@ struct Position{
     int j;
     std::string charSqare;
 
-    int getPosI(){
-        return this->i;
-    }
+    int getPosI() const{ return this->i; }
 
-    int getPosJ(){
-        return this->j;
-    }
+    int getPosJ() const{ return this->j; }
     
-    std::string getCharSquare(){
-        return this->charSqare;
-    }
+    std::string getCharSquare() const{ return this->charSqare; }
 
-    bool operator== (const Position& d){  //overloading operatore per poter utilizzare la funzione std::find()
+    bool operator== (const Position& d) const{ 
         if(this->i == d.i && this->j == d.j)
             return true;
         return false;

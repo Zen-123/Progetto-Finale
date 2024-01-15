@@ -5,9 +5,11 @@
 #include <ctime>
 #include <iomanip>
 #include <fstream>
-#include "../include/square.h"
-#include "../include/player.h"
-#include "../include/game.h"
+#include "../include/squareLib/square.h"
+#include "../include/playerLib/player.h" 
+#include "../include/gameLib/game.h"
+#include "../include/position.h"
+
 
 
 
@@ -20,15 +22,15 @@ int main(int argc, char *argv[])
         std::string word = argv[1];
         if (word == "Human" || word == "human")   
         {
+
             gameType = true;
-            game(gameType);
-
-
+            game(gameType, 20);
         }
         else if (word == "Computer" || word == "computer") 
         {
 
-           game(gameType);
+           game(gameType, 50);
+
 
         }
         else
